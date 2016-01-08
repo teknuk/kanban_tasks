@@ -1,1 +1,43 @@
 <%= render 'form'%>
+<div class="container-fluid">
+  <legend>Tasks</legend>
+  <div class="col-md-4">
+    <div class="panel panel-primary">
+      <div class="panel-heading text-center">TODO</div>
+      <div class="panel-body">
+        <ul id="notStarted" class="connectedSortable">
+          <% @not_started.each do |task|%>
+              <li id="<%= task.id %>" class="ui-state-default"><%= task.title %></li>
+
+          <%end%>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="panel panel-primary">
+      <div class="panel-heading text-center">DOING</div>
+      <div class="panel-body">
+        <ul id="doing" class="connectedSortable">
+          <% @doing.each do |task|%>
+              <li id="<%= task.id %>" class="ui-state-highlight"><%= task.title %></li>
+          <%end%>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="panel panel-primary">
+      <div class="panel-heading text-center">ACCEPTED</div>
+      <div class="panel-body">
+        <ul id="accepted" class="connectedSortable">
+          <% @accepted.each do |task|%>
+              <li id="<%= task.id %>" class="sortable3-li-color"><%= task.title %></li>
+          <%end%>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="foo">
+</div>

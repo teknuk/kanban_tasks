@@ -1,3 +1,22 @@
 // Place all the styles related to the tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#notStarted, #doing, #accepted {
+  width: 100%;
+  min-height: 20px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  float: left;
+  margin-right: 10px;
+}
+#notStarted li, #doing li, #accepted li {
+  cursor: pointer;
+  margin: 0 5px 5px 0px;
+  padding: 5px;
+  font-size: 1.2em;
+  width: 100%;
+}
+.sortable3-li-color {
+  border: 1px solid #767365;
+}
