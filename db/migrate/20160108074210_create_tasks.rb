@@ -5,7 +5,7 @@ class CreateTasks < ActiveRecord::Migration
         create_table :tasks do |t|
           t.timestamps null: false
           t.string :title, :null => false
-          t.text :discription
+          t.text :description
           t.integer :status, default: 0, :null => false
         end
       end
